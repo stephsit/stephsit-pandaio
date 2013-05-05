@@ -1,0 +1,22 @@
+<html>
+<head>
+	 <title>Pandaio</title>
+	 <link href='static_files/stylesheet.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id='head'>
+	<h1>pandaio</h1>
+</div>
+<div style="padding-top:56px" id="container" class="clearfix">
+{% for i in data %}
+  <div class="masonryImage col3" data-artist="{{ i.artist }}" data-url="{{i.pandora_url}}">
+    <img class='masonImg' style='margin:0 auto;' src='{{ i.art }}' />
+  </div>
+{% endfor %}
+</div> 
+<!-- JAVASCRIPT -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
+<script src="static_files/index.js"></script>
+</body>
+</html>
